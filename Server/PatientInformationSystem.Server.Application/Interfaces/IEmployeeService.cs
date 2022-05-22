@@ -11,7 +11,7 @@ namespace PatientInformationSystem.Server.Application.Interfaces
     public interface IEmployeeService
     {
         public AuthenticationResponse Authenticate(AuthenticationRequest authenticationRequest);
-        public Employee GetById(int id);
+        public Employee? GetById(int id);
         public IEnumerable<Employee> GetAll();
     }
 }

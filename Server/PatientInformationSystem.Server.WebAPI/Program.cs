@@ -1,4 +1,5 @@
 using PatientInformationSystem.Server.Application.Interfaces;
+using PatientInformationSystem.Server.MockServices;
 
 var builder = WebApplication.CreateBuilder(args);
 
