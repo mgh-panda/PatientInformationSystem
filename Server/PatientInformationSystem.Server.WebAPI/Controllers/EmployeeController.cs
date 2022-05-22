@@ -19,21 +19,12 @@ namespace PatientInformationSystem.Server.WebAPI.Controllers
             _logger = logger;
         }
 
-        [HttpPost("authenticate")]
-        public IActionResult Authenticate(AuthenticationRequest authenticationRequest)
-        {
-            AuthenticationResponse response = _employeeService.Authenticate(authenticationRequest);
-
-            if (response == null)
-                return BadRequest(new { message = "Invalid username or password" });
-
-            return Ok(response);
-        }
         [HttpGet]
         public IActionResult GetAll()
         {
             return Ok(_employeeService.GetAll());
         }
+
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
