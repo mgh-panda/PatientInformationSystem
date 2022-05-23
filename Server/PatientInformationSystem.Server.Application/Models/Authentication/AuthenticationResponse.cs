@@ -1,4 +1,5 @@
-﻿using PatientInformationSystem.Server.Domain.Entities;
+﻿
+using PatientInformationSystem.Server.PersistenceModel.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

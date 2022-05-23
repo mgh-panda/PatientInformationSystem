@@ -1,5 +1,4 @@
 ﻿using PatientInformationSystem.Server.Application.Models.Authentication;
-using PatientInformationSystem.Server.PersistenceModel.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,10 +7,8 @@ using System.Threading.Tasks;
 
 namespace PatientInformationSystem.Server.Application.Interfaces
 {
-    public interface IEmployeeService
+    public interface IAuthenticationService
     {
-        public Employee? GetById(int id);
-        public IEnumerable<Employee> GetAll();
-        public Employee CreateNewEmployee();
+        public AuthenticationResponse Authenticate(AuthenticationRequest authenticationRequest);
     }
 }
