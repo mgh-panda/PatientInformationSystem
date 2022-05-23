@@ -1,6 +1,7 @@
 ﻿using PatientInformationSystem.Server.Application.Interfaces;
 using PatientInformationSystem.Server.Application.Models.Authentication;
 using PatientInformationSystem.Server.Application.Models.Employee;
+using PatientInformationSystem.Server.MockServices.ExtensionMethods;
 using PatientInformationSystem.Server.PersistenceModel.Entities;
 
 namespace PatientInformationSystem.Server.MockServices
@@ -8,23 +9,34 @@ namespace PatientInformationSystem.Server.MockServices
     public class EmployeeService : IEmployeeService
     {
         private List<Employee> _employees = new List<Employee>();
-        public Employee CreateNewEmployee(NewEmployeeRequest newEmployee)
+        public EmployeeResponse CreateNewEmployee(NewEmployeeRequest newEmployee)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Employee> GetAll()
+        public IEnumerable<EmployeeResponse> GetAll()
         {
-            return _employees;
+            var employees = new List<EmployeeResponse>();
+            foreach (var employee in _employees)
+            {
+                employees.Add(employee.ToEmployeeResponse());
+            }
+            return employees;
         }
 
-        public Employee? GetById(int id)
+        public EmployeeResponse? GetById(int id)
         {
-            return _employees.FirstOrDefault(e => e.Id == id);
+            var employee = _employees.FirstOrDefault(e => e.Id == id);
+            if (employee == null)
+                return null;
+            return employee.ToEmployeeResponse();
         }
-        public Employee? GetByUsername(string username)
+        public EmployeeResponse? GetByUsername(string username)
         {
-            return _employees.FirstOrDefault(e => e.Username == username);
+            var employee = _employees.FirstOrDefault(e => e.Username == username);
+            if (employee == null)
+                return null;
+            return employee.ToEmployeeResponse();
         }
     }
 }

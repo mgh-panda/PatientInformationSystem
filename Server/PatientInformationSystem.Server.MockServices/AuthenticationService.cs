@@ -1,5 +1,6 @@
 ﻿using PatientInformationSystem.Server.Application.Interfaces;
 using PatientInformationSystem.Server.Application.Models.Authentication;
+using PatientInformationSystem.Server.Application.Models.Employee;
 using PatientInformationSystem.Server.PersistenceModel.Entities;
 using System;
 using System.Collections.Generic;
@@ -19,7 +20,7 @@ namespace PatientInformationSystem.Server.MockServices
 
         public AuthenticationResponse Authenticate(AuthenticationRequest authenticationRequest)
         {
-            Employee? employee = _employeeService.GetAll().FirstOrDefault(e => e.Username == authenticationRequest.Username);
+            EmployeeResponse? employee = _employeeService.GetAll().FirstOrDefault(e => e.Username == authenticationRequest.Username);
             if (employee == null)
                 return null;
             return new AuthenticationResponse(employee, "token");

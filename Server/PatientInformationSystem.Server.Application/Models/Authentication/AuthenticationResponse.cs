@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PatientInformationSystem.Server.Application.Models.Employee;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,19 +9,11 @@ namespace PatientInformationSystem.Server.Application.Models.Authentication
 {
     public record AuthenticationResponse
     {
-        public int Id { get; set; }
-        public string Username { get; init; }
-        public string FirstName { get; init; }
-        public string LastName { get; init; }
-        public List<string> Roles { get; set; }
+        public EmployeeResponse Employee { get; set; }
         public string Token { get; init; }
-        public AuthenticationResponse(Employee employee, string token)
+        public AuthenticationResponse(EmployeeResponse employee, string token)
         {
-            Id = employee.Id;
-            Username = employee.Username;
-            FirstName = employee.FirstName;
-            LastName = employee.LastName;
-            Roles = employee.Roles;
+            Employee = employee;
             Token = token;
         }
     }

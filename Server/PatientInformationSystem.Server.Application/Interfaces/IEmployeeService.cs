@@ -11,8 +11,8 @@ namespace PatientInformationSystem.Server.Application.Interfaces
 {
     public interface IEmployeeService
     {
-        public Employee? GetById(int id);
-        public IEnumerable<Employee> GetAll();
-        public Employee CreateNewEmployee(NewEmployeeRequest newEmployeeRequest);
+        public EmployeeResponse? GetById(int id);
+        public IEnumerable<EmployeeResponse> GetAll();
+        public EmployeeResponse CreateNewEmployee(NewEmployeeRequest newEmployeeRequest);
     }
 }
