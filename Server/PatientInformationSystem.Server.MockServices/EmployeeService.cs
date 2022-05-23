@@ -8,7 +8,7 @@ namespace PatientInformationSystem.Server.MockServices
 {
     public class EmployeeService : IEmployeeService
     {
-        private List<Employee> _employees = new List<Employee>();
+        private static List<Employee> _employees = new List<Employee>();
 
         public EmployeeResponse CreateNewEmployee(NewEmployeeRequest newEmployee)
         {
@@ -18,7 +18,9 @@ namespace PatientInformationSystem.Server.MockServices
             SetPassword(newEmployee.Password, employee);
             employee.FirstName = newEmployee.FirstName;
             employee.LastName = newEmployee.LastName;
-            throw new NotImplementedException();
+            employee.Roles = newEmployee.Roles;
+            _employees.Add(employee);
+            return employee.ToEmployeeResponse();
         }
 
         public IEnumerable<EmployeeResponse> GetAll()

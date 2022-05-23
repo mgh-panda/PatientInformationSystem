@@ -4,7 +4,7 @@ using PatientInformationSystem.Server.Application.Models.Employee;
 
 namespace PatientInformationSystem.Server.MockServices
 {
-    internal class AuthenticationService : IAuthenticationService
+    public class AuthenticationService : IAuthenticationService
     {
         private IEmployeeService _employeeService;
 

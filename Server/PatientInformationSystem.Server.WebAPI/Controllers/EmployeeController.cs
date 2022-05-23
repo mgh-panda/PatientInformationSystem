@@ -33,5 +33,13 @@ namespace PatientInformationSystem.Server.WebAPI.Controllers
 
             return Ok(employee);
         }
+        [HttpPost("newEmployee")]
+        public IActionResult PostNewEmployee(NewEmployeeRequest newEmployeeRquest)
+        {
+            EmployeeResponse? employee = _employeeService.CreateNewEmployee(newEmployeeRquest);
+            if (employee == null)
+                return BadRequest(new { message = "Employee could not be added" });
+            return Ok(employee);
+        }
     }
 }
