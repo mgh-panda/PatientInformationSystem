@@ -1,5 +1,6 @@
 ﻿using PatientInformationSystem.Server.Application.Interfaces;
 using PatientInformationSystem.Server.Application.Models.Employee;
+using PatientInformationSystem.Server.Application.Static;
 using PatientInformationSystem.Server.MockServices.ExtensionMethods;
 using PatientInformationSystem.Server.PersistenceModel.Entities;
 
@@ -11,6 +12,12 @@ namespace PatientInformationSystem.Server.MockServices
 
         public EmployeeResponse CreateNewEmployee(NewEmployeeRequest newEmployee)
         {
+            Employee employee = new Employee();
+            employee.Id = _employees.Count;
+            employee.Username = newEmployee.Username;
+            SetPassword(newEmployee.Password, employee);
+            employee.FirstName = newEmployee.FirstName;
+            employee.LastName = newEmployee.LastName;
             throw new NotImplementedException();
         }
 
@@ -38,6 +45,15 @@ namespace PatientInformationSystem.Server.MockServices
             if (employee == null)
                 return null;
             return employee.ToEmployeeResponse();
+        }
+
+        private void SetPassword(string password, Employee employee)
+        {
+            byte[] passwordHash;
+            byte[] passwordSalt;
+            PasswordHelper.CreateHashedPassword(password, out passwordHash, out passwordSalt);
+            employee.PasswordHash = passwordHash;
+            employee.PasswordSalt = passwordSalt;
         }
     }
 }
