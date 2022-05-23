@@ -1,5 +1,4 @@
 ﻿using PatientInformationSystem.Server.Application.Interfaces;
-using PatientInformationSystem.Server.Application.Models.Authentication;
 using PatientInformationSystem.Server.Application.Models.Employee;
 using PatientInformationSystem.Server.MockServices.ExtensionMethods;
 using PatientInformationSystem.Server.PersistenceModel.Entities;
@@ -9,6 +8,7 @@ namespace PatientInformationSystem.Server.MockServices
     public class EmployeeService : IEmployeeService
     {
         private List<Employee> _employees = new List<Employee>();
+
         public EmployeeResponse CreateNewEmployee(NewEmployeeRequest newEmployee)
         {
             throw new NotImplementedException();
@@ -31,6 +31,7 @@ namespace PatientInformationSystem.Server.MockServices
                 return null;
             return employee.ToEmployeeResponse();
         }
+
         public EmployeeResponse? GetByUsername(string username)
         {
             var employee = _employees.FirstOrDefault(e => e.Username == username);

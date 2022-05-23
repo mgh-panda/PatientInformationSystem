@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
+﻿using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace PatientInformationSystem.Server.Application.Static
 {
@@ -11,12 +7,13 @@ namespace PatientInformationSystem.Server.Application.Static
     {
         public static void CreateHashedPassword(string password, out byte[] hashedPassword, out byte[] passwordSalt)
         {
-            using(var hashAlgorithm = new HMACSHA512())
+            using (var hashAlgorithm = new HMACSHA512())
             {
                 passwordSalt = hashAlgorithm.Key;
                 hashedPassword = hashAlgorithm.ComputeHash(Encoding.UTF8.GetBytes(password));
             }
         }
+
         public static bool VerifyPasswordHash(string password, byte[] storedPasswordHash, byte[] storedPasswordSalt)
         {
             using (var hashAlgorithm = new HMACSHA512(storedPasswordSalt))

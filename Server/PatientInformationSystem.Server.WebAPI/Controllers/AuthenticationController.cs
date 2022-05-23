@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using PatientInformationSystem.Server.Application.Interfaces;
 using PatientInformationSystem.Server.Application.Models.Authentication;
 
@@ -21,7 +20,7 @@ namespace PatientInformationSystem.Server.WebAPI.Controllers
         [HttpPost]
         public IActionResult Authenticate(AuthenticationRequest authenticationRequest)
         {
-            AuthenticationResponse response = _authenticationService.Authenticate(authenticationRequest);
+            AuthenticationResponse? response = _authenticationService.Authenticate(authenticationRequest);
 
             if (response == null)
                 return BadRequest(new { message = "Invalid username or password" });

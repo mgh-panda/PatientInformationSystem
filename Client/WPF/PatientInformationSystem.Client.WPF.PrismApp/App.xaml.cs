@@ -16,7 +16,6 @@ namespace PatientInformationSystem.Client.WPF.PrismApp
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-
         }
     }
 }

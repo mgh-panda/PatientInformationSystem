@@ -1,7 +1,5 @@
-﻿using PatientInformationSystem.Client.WPF.Modules.Login.Views;
-using Prism.Ioc;
+﻿using Prism.Ioc;
 using Prism.Modularity;
-using Prism.Regions;
 
 namespace PatientInformationSystem.Client.WPF.Modules.Login
 {
@@ -9,12 +7,10 @@ namespace PatientInformationSystem.Client.WPF.Modules.Login
     {
         public void OnInitialized(IContainerProvider containerProvider)
         {
-
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-
         }
     }
 }

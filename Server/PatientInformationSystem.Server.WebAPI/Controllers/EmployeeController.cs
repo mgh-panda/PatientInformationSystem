@@ -1,8 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using PatientInformationSystem.Server.Application.Interfaces;
-using PatientInformationSystem.Server.Application.Models.Authentication;
-using PatientInformationSystem.Server.Domain.Entities;
+using PatientInformationSystem.Server.Application.Models.Employee;
 
 namespace PatientInformationSystem.Server.WebAPI.Controllers
 {
@@ -28,7 +26,7 @@ namespace PatientInformationSystem.Server.WebAPI.Controllers
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
-            Employee employee = _employeeService.GetById(id);
+            EmployeeResponse? employee = _employeeService.GetById(id);
 
             if (employee == null)
                 return BadRequest(new { message = "Employee not found" });
