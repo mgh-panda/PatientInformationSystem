@@ -1,17 +1,16 @@
 ﻿using PatientInformationSystem.Server.Application.Interfaces;
 using PatientInformationSystem.Server.Application.Models.Authentication;
+using PatientInformationSystem.Server.Application.Models.Employee;
 using PatientInformationSystem.Server.PersistenceModel.Entities;
 
 namespace PatientInformationSystem.Server.MockServices
 {
     public class EmployeeService : IEmployeeService
     {
-        public AuthenticationResponse Authenticate(AuthenticationRequest authenticationRequest)
+        private List<Employee> _employees = new List<Employee>();
+        public Employee CreateNewEmployee(NewEmployeeRequest newEmployee)
         {
-            Employee? employee = _employees.FirstOrDefault(e => e.Username == authenticationRequest.Username && e.Password == authenticationRequest.Password);
-            if (employee == null)
-                return null;
-            return new AuthenticationResponse(employee, "token");
+            throw new NotImplementedException();
         }
 
         public IEnumerable<Employee> GetAll()
@@ -22,6 +21,10 @@ namespace PatientInformationSystem.Server.MockServices
         public Employee? GetById(int id)
         {
             return _employees.FirstOrDefault(e => e.Id == id);
+        }
+        public Employee? GetByUsername(string username)
+        {
+            return _employees.FirstOrDefault(e => e.Username == username);
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using PatientInformationSystem.Server.Application.Models.Authentication;
+using PatientInformationSystem.Server.Application.Models.Employee;
 using PatientInformationSystem.Server.PersistenceModel.Entities;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,6 @@ namespace PatientInformationSystem.Server.Application.Interfaces
     {
         public Employee? GetById(int id);
         public IEnumerable<Employee> GetAll();
-        public Employee CreateNewEmployee();
+        public Employee CreateNewEmployee(NewEmployeeRequest newEmployeeRequest);
     }
 }

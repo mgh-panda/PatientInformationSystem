@@ -9,19 +9,19 @@ namespace PatientInformationSystem.Server.WebAPI.Controllers
     [ApiController]
     public class AuthenticationController : ControllerBase
     {
-        private IEmployeeService _employeeService;
+        private IAuthenticationService _authenticationService;
         private readonly ILogger<EmployeeController> _logger;
 
-        public AuthenticationController(IEmployeeService employeeService, ILogger<EmployeeController> logger)
+        public AuthenticationController(IAuthenticationService authenticationService, ILogger<EmployeeController> logger)
         {
-            _employeeService = employeeService;
+            _authenticationService = authenticationService;
             _logger = logger;
         }
 
         [HttpPost]
         public IActionResult Authenticate(AuthenticationRequest authenticationRequest)
         {
-            AuthenticationResponse response = _employeeService.Authenticate(authenticationRequest);
+            AuthenticationResponse response = _authenticationService.Authenticate(authenticationRequest);
 
             if (response == null)
                 return BadRequest(new { message = "Invalid username or password" });
