@@ -9,6 +9,6 @@ namespace PatientInformationSystem.Server.Application.Interfaces
 {
     public interface IAuthenticationService
     {
-        public AuthenticationResponse Authenticate(AuthenticationRequest authenticationRequest);
+        public AuthenticationResponse? Authenticate(AuthenticationRequest authenticationRequest);
     }
 }

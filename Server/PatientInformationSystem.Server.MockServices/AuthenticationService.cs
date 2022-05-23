@@ -18,7 +18,7 @@ namespace PatientInformationSystem.Server.MockServices
             _employeeService = employeeService;
         }
 
-        public AuthenticationResponse Authenticate(AuthenticationRequest authenticationRequest)
+        public AuthenticationResponse? Authenticate(AuthenticationRequest authenticationRequest)
         {
             EmployeeResponse? employee = _employeeService.GetAll().FirstOrDefault(e => e.Username == authenticationRequest.Username);
             if (employee == null)
