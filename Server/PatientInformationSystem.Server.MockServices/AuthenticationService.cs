@@ -18,6 +18,7 @@ namespace PatientInformationSystem.Server.MockServices
             EmployeeResponse? employee = _employeeService.GetAll().FirstOrDefault(e => e.Username == authenticationRequest.Username);
             if (employee == null)
                 return null;
+
             return new AuthenticationResponse(employee, "token");
         }
     }

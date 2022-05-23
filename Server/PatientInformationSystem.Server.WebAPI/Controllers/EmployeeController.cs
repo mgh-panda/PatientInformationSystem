@@ -33,6 +33,7 @@ namespace PatientInformationSystem.Server.WebAPI.Controllers
 
             return Ok(employee);
         }
+
         [HttpPost("newEmployee")]
         public IActionResult PostNewEmployee(NewEmployeeRequest newEmployeeRquest)
         {
