@@ -5,23 +5,21 @@ VisualStudioVersion = 17.2.32505.173
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{148D7112-168D-4239-B579-0321598D330B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientInformationSystem.Server.WebAPI", "Server\PatientInformationSystem.Server.WebAPI\PatientInformationSystem.Server.WebAPI.csproj", "{C8240E25-1FD5-4297-A9E2-1E15A90EE7C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PatientInformationSystem.Server.WebAPI", "Server\PatientInformationSystem.Server.WebAPI\PatientInformationSystem.Server.WebAPI.csproj", "{C8240E25-1FD5-4297-A9E2-1E15A90EE7C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientInformationSystem.Server.Application", "Server\PatientInformationSystem.Server.Application\PatientInformationSystem.Server.Application.csproj", "{A496D33E-DCF2-4F03-9E53-C08400D89283}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PatientInformationSystem.Server.Application", "Server\PatientInformationSystem.Server.Application\PatientInformationSystem.Server.Application.csproj", "{A496D33E-DCF2-4F03-9E53-C08400D89283}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{4A58E79D-0ADB-440C-9F30-1EFAF41823BE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WPF", "WPF", "{1D72899E-32B6-468C-AF5D-ACB986400FED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientInformationSystem.Client.WPF.PrismApp", "Client\WPF\PatientInformationSystem.Client.WPF.PrismApp\PatientInformationSystem.Client.WPF.PrismApp.csproj", "{EF144862-844D-4E43-8BC5-340B37BF92C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PatientInformationSystem.Server.MockServices", "Server\PatientInformationSystem.Server.MockServices\PatientInformationSystem.Server.MockServices.csproj", "{CE92156D-E9A4-47A4-9847-39DD870C34C0}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{53ECAA15-D65B-4842-A050-BAAE39F5E319}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PatientInformationSystem.Server.PersistenceModel", "Server\PatientInformationSystem.Server.PersistenceModel\PatientInformationSystem.Server.PersistenceModel.csproj", "{006A8DBE-B2EF-4229-B663-FEB2B81E7F91}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientInformationSystem.Client.WPF.Modules.Login", "Client\WPF\Modules\PatientInformationSystem.Client.WPF.Modules.Login\PatientInformationSystem.Client.WPF.Modules.Login.csproj", "{5533E79A-A119-416B-A759-B7BF6A04CDE2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientInformationSystem.Client.WPF.DesktopApplication", "Client\WPF\PatientInformationSystem.Client.WPF.DesktopApplication\PatientInformationSystem.Client.WPF.DesktopApplication.csproj", "{ECA5EF8C-B8CB-458B-9637-E60A26F805C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientInformationSystem.Server.MockServices", "Server\PatientInformationSystem.Server.MockServices\PatientInformationSystem.Server.MockServices.csproj", "{CE92156D-E9A4-47A4-9847-39DD870C34C0}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientInformationSystem.Server.PersistenceModel", "Server\PatientInformationSystem.Server.PersistenceModel\PatientInformationSystem.Server.PersistenceModel.csproj", "{006A8DBE-B2EF-4229-B663-FEB2B81E7F91}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientInformationSystem.Client.WPF.Library", "Client\WPF\PatientInformationSystem.Client.WPF.Library\PatientInformationSystem.Client.WPF.Library.csproj", "{98034BFA-56AA-4130-8E34-E74CE66C15ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,14 +35,6 @@ Global
 		{A496D33E-DCF2-4F03-9E53-C08400D89283}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A496D33E-DCF2-4F03-9E53-C08400D89283}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A496D33E-DCF2-4F03-9E53-C08400D89283}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EF144862-844D-4E43-8BC5-340B37BF92C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EF144862-844D-4E43-8BC5-340B37BF92C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EF144862-844D-4E43-8BC5-340B37BF92C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EF144862-844D-4E43-8BC5-340B37BF92C4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5533E79A-A119-416B-A759-B7BF6A04CDE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5533E79A-A119-416B-A759-B7BF6A04CDE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5533E79A-A119-416B-A759-B7BF6A04CDE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5533E79A-A119-416B-A759-B7BF6A04CDE2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CE92156D-E9A4-47A4-9847-39DD870C34C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CE92156D-E9A4-47A4-9847-39DD870C34C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE92156D-E9A4-47A4-9847-39DD870C34C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -53,6 +43,14 @@ Global
 		{006A8DBE-B2EF-4229-B663-FEB2B81E7F91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{006A8DBE-B2EF-4229-B663-FEB2B81E7F91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{006A8DBE-B2EF-4229-B663-FEB2B81E7F91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECA5EF8C-B8CB-458B-9637-E60A26F805C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECA5EF8C-B8CB-458B-9637-E60A26F805C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECA5EF8C-B8CB-458B-9637-E60A26F805C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECA5EF8C-B8CB-458B-9637-E60A26F805C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98034BFA-56AA-4130-8E34-E74CE66C15ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98034BFA-56AA-4130-8E34-E74CE66C15ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98034BFA-56AA-4130-8E34-E74CE66C15ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98034BFA-56AA-4130-8E34-E74CE66C15ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,11 +59,10 @@ Global
 		{C8240E25-1FD5-4297-A9E2-1E15A90EE7C4} = {148D7112-168D-4239-B579-0321598D330B}
 		{A496D33E-DCF2-4F03-9E53-C08400D89283} = {148D7112-168D-4239-B579-0321598D330B}
 		{1D72899E-32B6-468C-AF5D-ACB986400FED} = {4A58E79D-0ADB-440C-9F30-1EFAF41823BE}
-		{EF144862-844D-4E43-8BC5-340B37BF92C4} = {1D72899E-32B6-468C-AF5D-ACB986400FED}
-		{53ECAA15-D65B-4842-A050-BAAE39F5E319} = {1D72899E-32B6-468C-AF5D-ACB986400FED}
-		{5533E79A-A119-416B-A759-B7BF6A04CDE2} = {53ECAA15-D65B-4842-A050-BAAE39F5E319}
 		{CE92156D-E9A4-47A4-9847-39DD870C34C0} = {148D7112-168D-4239-B579-0321598D330B}
 		{006A8DBE-B2EF-4229-B663-FEB2B81E7F91} = {148D7112-168D-4239-B579-0321598D330B}
+		{ECA5EF8C-B8CB-458B-9637-E60A26F805C1} = {1D72899E-32B6-468C-AF5D-ACB986400FED}
+		{98034BFA-56AA-4130-8E34-E74CE66C15ED} = {1D72899E-32B6-468C-AF5D-ACB986400FED}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {72C76877-3876-43A3-B528-257EC4334720}

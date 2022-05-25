@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace PatientInformationSystem.Client.WPF.PrismApp.Views
+namespace PatientInformationSystem.Client.WPF.DesktopApplication
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
