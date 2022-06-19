@@ -1,6 +1,6 @@
 ﻿using PatientInformationSystem.Server.Application.Models.Employee;
 
-namespace PatientInformationSystem.Server.Application.Interfaces
+namespace PatientInformationSystem.Server.Application.IServices
 {
     public interface IEmployeeService
     {

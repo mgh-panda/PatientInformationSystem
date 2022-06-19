@@ -1,4 +1,5 @@
-﻿using PatientInformationSystem.Client.Core.IServices;
+﻿using PatientInformationSystem.Client.Core.Services;
+using PatientInformationSystem.Client.Core.Models.APIModels.Authentication;
 using PatientInformationSystem.Client.WPF.Library.Abstract;
 
 namespace PatientInformationSystem.Client.WPF.Library.Commands
@@ -14,7 +15,12 @@ namespace PatientInformationSystem.Client.WPF.Library.Commands
 
         public override void Execute(object? parameter)
         {
-            throw new NotImplementedException();
+            if (parameter == null)
+            {
+                throw new ArgumentNullException(nameof(parameter));
+            }
+            //Replace with event
+            Console.WriteLine(_authenticationService.Authenticate((AuthenticationRequest)parameter));
         }
     }
 }

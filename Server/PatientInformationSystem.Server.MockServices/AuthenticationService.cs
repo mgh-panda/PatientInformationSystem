@@ -1,4 +1,4 @@
-﻿using PatientInformationSystem.Server.Application.Interfaces;
+﻿using PatientInformationSystem.Server.Application.IServices;
 using PatientInformationSystem.Server.Application.Models.Authentication;
 using PatientInformationSystem.Server.Application.Models.Employee;
 

@@ -7,5 +7,19 @@
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBox Grid.Column="1" Grid.Row="0"/>
+        <PasswordBox Grid.Column="1" Grid.Row="1"/>
+        <Button Grid.Column="1" Grid.Row="2" 
+                Content="Login"/>
     </Grid>
 </UserControl>

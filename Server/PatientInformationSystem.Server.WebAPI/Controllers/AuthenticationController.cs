@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using PatientInformationSystem.Server.Application.Interfaces;
+using PatientInformationSystem.Server.Application.IServices;
 using PatientInformationSystem.Server.Application.Models.Authentication;
 
 namespace PatientInformationSystem.Server.WebAPI.Controllers
