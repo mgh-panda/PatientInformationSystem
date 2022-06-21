@@ -19,7 +19,7 @@ namespace PatientInformationSystem.Client.WPF.Library.Commands
             {
                 throw new ArgumentNullException(nameof(parameter));
             }
-            //Replace with event
+            //TODO: Raise authentication event
             Console.WriteLine(_authenticationService.Authenticate((AuthenticationRequest)parameter));
         }
     }
